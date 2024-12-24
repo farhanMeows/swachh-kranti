@@ -115,7 +115,11 @@ function Dashboard() {
   };
 
   return (
-    <div className="flex h-full bg-gray-900 text-gray-200">
+    <div
+      className={`flex ${
+        activeSection === "Revenue" ? "h-full" : "h-screen"
+      } bg-gray-900 text-gray-200`}
+    >
       {/* Sidebar */}
       <aside className="w-1/5 bg-gray-800 p-4">
         <h1 className="text-2xl font-bold mb-6 text-center">Dashboard</h1>
@@ -140,7 +144,7 @@ function Dashboard() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1  p-6">
+      <main className="flex-1   p-6">
         {/* Header */}
         <h2 className="text-3xl bg-gray-800 font-bold mb-6">{activeSection}</h2>
         {activeSection === "Customer" && (
