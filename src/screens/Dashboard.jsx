@@ -115,7 +115,7 @@ function Dashboard() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-900 text-gray-200">
+    <div className="flex h-full bg-gray-900 text-gray-200">
       {/* Sidebar */}
       <aside className="w-1/5 bg-gray-800 p-4">
         <h1 className="text-2xl font-bold mb-6 text-center">Dashboard</h1>
@@ -140,9 +140,9 @@ function Dashboard() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-6">
+      <main className="flex-1  p-6">
         {/* Header */}
-        <h2 className="text-3xl font-bold mb-6">{activeSection}</h2>
+        <h2 className="text-3xl bg-gray-800 font-bold mb-6">{activeSection}</h2>
         {activeSection === "Customer" && (
           <div className="grid grid-cols-2 gap-4">
             {[
@@ -230,7 +230,7 @@ function Dashboard() {
         {activeSection === "Revenue" && (
           <div>
             {/* Revenue Filters */}
-            <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-2 bg-gray-800 gap-6 mb-6">
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h3 className="text-xl font-bold mb-4">Revenue Overview</h3>
                 <select
@@ -257,7 +257,7 @@ function Dashboard() {
             </div>
 
             {/* Charts */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 bg-gray-800 md:grid-cols-2 gap-6">
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <Bar data={getBarData()} options={barOptions} />
               </div>
