@@ -7,18 +7,15 @@ import Dashboard from "./screens/Dashboard";
 import OrderPickup from "./components/OrderPickup";
 import MyMunicipal from "./components/MyMunicipal";
 import MyProfile from "./components/MyProfile";
+import Mvp from "./screens/Mvp";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/customer" element={<Customer />}>
-          {/* Nested routes under Customer */}
-          <Route path="order-pickup" element={<OrderPickup />} />
-          <Route path="my-municipal" element={<MyMunicipal />} />
-          <Route path="my-profile" element={<MyProfile />} />
-        </Route>
+        <Route path="/" element={<Mvp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/customer" element={<Customer />}></Route>
         <Route path="/driver" element={<Driver />} />
         <Route path="/manager" element={<Manager />} />
       </Routes>
