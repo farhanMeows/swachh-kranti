@@ -9,12 +9,6 @@ function Mvp() {
       <h1 className="text-3xl font-bold mb-6">Welcome to the MVP</h1>
       <div className="space-x-4 gap-2">
         <button
-          onClick={() => navigate("/")}
-          className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
-        >
-          Home
-        </button>
-        <button
           onClick={() => navigate("/dashboard")}
           className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
         >
@@ -30,13 +24,13 @@ function Mvp() {
           onClick={() => navigate("/driver")}
           className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
         >
-          Driver
+          Driver/Collector
         </button>
         <button
           onClick={() => navigate("/manager")}
           className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
         >
-          Manager
+          Manager/Supervisor
         </button>
       </div>
     </div>
